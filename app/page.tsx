@@ -3,17 +3,22 @@ export default function Home() {
     { name: "Python", category: "Language" },
     { name: "Java", category: "Language" },
     { name: "JavaScript", category: "Language" },
+    { name: "C#", category: "Language" },
     { name: "Spring", category: "Framework" },
     { name: ".NET", category: "Framework" },
     { name: "React", category: "Framework" },
-    { name: "HTML", category: "Web" },
-    { name: "CSS", category: "Web" },
+    { name: "Django", category: "Framework" },
+    { name: "TensorFlow", category: "ML/DS" },
+    { name: "SQL", category: "Data" },
+    { name: "NoSQL", category: "Data" },
+    { name: "DSA", category: "Concepts" },
   ];
 
   const navLinks = [
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
     { href: "#experience", label: "Experience" },
+    { href: "#projects", label: "Projects" },
     { href: "#education", label: "Education" },
     { href: "#contact", label: "Contact" },
   ];
@@ -23,9 +28,6 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="text-accent font-semibold text-lg tracking-tight">
-            O.
-          </a>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -53,12 +55,12 @@ export default function Home() {
             Hello, I&apos;m
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in animate-delay-100">
-            Olga
+            Olgica
           </h1>
           <p className="text-xl md:text-2xl text-muted mb-8 animate-fade-in animate-delay-200">
-            Data Science Engineer{" "}
+            Software Engineer{" "}
             <span className="text-accent">|</span> ML{" "}
-            <span className="text-accent">|</span> DevOps
+            <span className="text-accent">|</span> Data Science
           </p>
           <p className="text-muted max-w-lg mx-auto mb-12 animate-fade-in animate-delay-300">
             Building intelligent systems and scalable solutions. 
@@ -94,8 +96,8 @@ export default function Home() {
           <h3 className="text-3xl md:text-4xl font-bold mb-8">Who I Am</h3>
           <div className="space-y-6 text-muted leading-relaxed">
             <p>
-              I&apos;m a Data Science Engineer with a strong foundation in machine learning, 
-              DevOps practices, and full-stack development. My approach combines analytical 
+              I&apos;m a graduated Software Engineer with a strong foundation in full-stack development, machine learning 
+              and data science. My approach combines analytical 
               thinking with practical implementation to deliver solutions that make a real impact.
             </p>
             <p>
@@ -143,10 +145,10 @@ export default function Home() {
               </p>
             </div>
             <div className="p-6 bg-card border border-border rounded-lg">
-              <div className="text-accent text-2xl mb-3">⚙️</div>
-              <h4 className="font-semibold mb-2">DevOps</h4>
+              <div className="text-accent text-2xl mb-3">💻</div>
+              <h4 className="font-semibold mb-2">Software Development</h4>
               <p className="text-sm text-muted">
-                CI/CD, containerization, and infrastructure automation
+                Full-stack applications, APIs, and scalable system architecture
               </p>
             </div>
           </div>
@@ -162,29 +164,159 @@ export default function Home() {
             <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] bg-accent rounded-full" />
             <div className="mb-8">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <h4 className="text-xl font-semibold">Software Engineering Intern</h4>
+                <h4 className="text-xl font-semibold">Data Science Intern</h4>
                 <span className="text-sm text-accent">Feb 2025 - June 2025</span>
               </div>
-              <p className="text-muted mb-4">Innovation DOOEL</p>
+              <p className="text-muted mb-4">Innovation DOOEL, Skopje, North Macedonia (on-site)</p>
               <ul className="space-y-2 text-muted">
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1.5">▹</span>
-                  <span>Developed and maintained data processing pipelines</span>
+                  <span>Contributed to the ViewECG project, focusing on data processing and analysis of Electrocardiogram (ECG) data to extract meaningful features for diagnostic models</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1.5">▹</span>
-                  <span>Collaborated with cross-functional teams on ML projects</span>
+                  <span>Worked on the Gluco project, applying machine learning techniques to analyze and predict trends from Glucose monitoring data</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1.5">▹</span>
-                  <span>Implemented DevOps practices for automated deployments</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1.5">▹</span>
-                  <span>Contributed to full-stack web application development</span>
+                  <span>Gained practical experience with data cleaning, feature engineering, and model deployment within a professional software development and data science pipeline</span>
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-24 px-6 bg-card/50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-sm text-accent tracking-widest uppercase mb-2">Projects</h2>
+          <h3 className="text-3xl md:text-4xl font-bold mb-12">Featured Work</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Project 5: Breast Cancer Detection */}
+            <div className="p-6 bg-card border border-border rounded-lg flex flex-col">
+              <h4 className="text-xl font-semibold mb-3">Breast Cancer Detection</h4>
+              <p className="text-sm text-muted mb-4 flex-grow">
+                Breast Cancer Graph Analysis is a deep learning and graph-based project for classifying histopathology images as benign or malignant. The system detects individual cell nuclei from tissue images and constructs graphs that model spatial relationships between cells. These graphs provide the foundation for applying Graph Neural Networks to capture complex tissue patterns beyond traditional CNNs. The project demonstrates advanced skills in medical image analysis, graph modeling, and AI-driven cancer detection.
+              </p>
+              <div className="mb-4">
+                <span className="text-xs text-accent bg-accent/10 px-2 py-1 rounded">Machine Learning / Medical AI</span>
+              </div>
+              <a
+                href="https://github.com/olgicaup/breast-cancer-detection"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline text-sm flex items-center gap-2"
+              >
+                View on GitHub
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Project 1: Beach Bar Application */}
+            <div className="p-6 bg-card border border-border rounded-lg flex flex-col">
+              <h4 className="text-xl font-semibold mb-3">Beach Bar Application and Menu</h4>
+              <p className="text-sm text-muted mb-4 flex-grow">
+                Beach Bar Reform is a React web application designed to enhance the dining experience in restaurants by providing a seamless QR-scanning menu for customers. The application aims to reduce physical contact between customers and menus, making it more hygienic and convenient.
+              </p>
+              <div className="mb-4">
+                <span className="text-xs text-accent bg-accent/10 px-2 py-1 rounded">Web Development</span>
+              </div>
+              <a
+                href="https://github.com/devemit/reform-menu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline text-sm flex items-center gap-2"
+              >
+                View on GitHub
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Project 2: BookStore */}
+            <div className="p-6 bg-card border border-border rounded-lg flex flex-col">
+              <h4 className="text-xl font-semibold mb-3">BookStore</h4>
+              <p className="text-sm text-muted mb-4 flex-grow">
+                BookStore is a full-stack web application for managing an online bookstore, built using a clean Onion Architecture. It provides complete CRUD functionality for books, authors, publishers, shopping carts, and customer orders. The system includes a service layer that handles business logic such as order processing, cart management, and PDF invoice generation. This project demonstrates strong skills in backend architecture, data modeling, and building scalable web applications.
+              </p>
+              <div className="mb-4">
+                <span className="text-xs text-accent bg-accent/10 px-2 py-1 rounded">Full-Stack Development</span>
+              </div>
+              <a
+                href="https://github.com/olgicaup/BookStore"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline text-sm flex items-center gap-2"
+              >
+                View on GitHub
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Project 3: Wineries Application */}
+            <div className="p-6 bg-card border border-border rounded-lg flex flex-col">
+              <h4 className="text-xl font-semibold mb-3">Wineries Application</h4>
+              <p className="text-sm text-muted mb-4 flex-grow">
+                Collaborated with 5 colleagues to design and develop a Wineries application that allows wine lovers to explore wineries across North Macedonia. Contributed to backend development using Java Spring Boot, creating secure APIs for wineries management and user authentication.
+              </p>
+              <div className="mb-4">
+                <span className="text-xs text-accent bg-accent/10 px-2 py-1 rounded">Full-Stack Development</span>
+              </div>
+              <a
+                href="https://github.com/ElenaS2332/dians-task-titans"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline text-sm flex items-center gap-2"
+              >
+                View on GitHub
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Project 6: BrainBoost */}
+            <div className="p-6 bg-card border border-border rounded-lg flex flex-col">
+              <h4 className="text-xl font-semibold mb-3">BrainBoost</h4>
+              <p className="text-sm text-muted mb-4 flex-grow">
+                BrainBoost is a Django web application that uses Google's Gemini 1.5 Flash API to transform documents into summaries and study questions. The platform features a robust backend for extracting text from PDF, DOCX, and TXT files, seamlessly integrating file processing with generative AI. Built with Bootstrap, the interface provides a responsive and intuitive environment for users to analyze their research materials. This project demonstrates full-stack development, from complex file parsing to advanced AI API implementation.
+              </p>
+              <div className="mb-4">
+                <span className="text-xs text-accent bg-accent/10 px-2 py-1 rounded">Full-Stack Development</span>
+              </div>
+              <a
+                href="https://github.com/olgicaup/brainboost-repo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline text-sm flex items-center gap-2"
+              >
+                View on GitHub
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Project 4: Cassandra vs MySQL */}
+            <div className="p-6 bg-card border border-border rounded-lg flex flex-col">
+              <h4 className="text-xl font-semibold mb-3">Comparative Study: Cassandra vs. MySQL</h4>
+              <p className="text-sm text-muted mb-4 flex-grow">
+                Collaborated with 2 colleagues on a research and development project focused on comparing the performance and scalability of Cassandra (NoSQL) and MySQL (Relational Database). Set up and managed Cassandra clusters in a distributed environment, focusing on data replication and partitioning.
+              </p>
+              <div className="mb-4">
+                <span className="text-xs text-accent bg-accent/10 px-2 py-1 rounded">Database Research</span>
+              </div>
+              
+            </div>
+
+            
           </div>
         </div>
       </section>
@@ -200,13 +332,12 @@ export default function Home() {
                 <h4 className="text-xl font-semibold mb-2">
                   Faculty of Computer Science and Engineering
                 </h4>
-                <p className="text-muted mb-2">FINKI - Ss. Cyril and Methodius University</p>
+                
                 <p className="text-muted">Skopje, North Macedonia</p>
+                <p className="text-muted mb-2">Bachelor of Computer Science and Engineering, specialized in Software Engineering and Information Systems</p>
               </div>
               <div className="mt-4 md:mt-0 md:text-right">
-                <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">
-                  Class of 2025
-                </span>
+                <span className="inline-block px-10 py-2 bg-accent/10 text-accent text-sm rounded-full whitespace-nowrap">2021-2025</span>
               </div>
             </div>
           </div>
@@ -232,7 +363,7 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/olgicaup"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-accent transition-colors duration-200"
@@ -243,7 +374,7 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/olgica-upcheva/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted hover:text-accent transition-colors duration-200"
@@ -261,7 +392,7 @@ export default function Home() {
       <footer className="py-8 px-6 border-t border-border">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-sm text-muted">
-            © {new Date().getFullYear()} Olga. Built with Next.js & Tailwind CSS.
+            © {new Date().getFullYear()} Olgica Upcheva
           </p>
         </div>
       </footer>
